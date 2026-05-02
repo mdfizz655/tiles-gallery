@@ -3,11 +3,10 @@ import { mongodbAdapter } from "better-auth/adapters/mongodb";
 import clientPromise from "./db";
 
 export const auth = betterAuth({
-    database: mongodbAdapter(await clientPromise.then(c => c.db())),
+    database: mongodbAdapter(await clientPromise.then(res => res.db())),
     emailAndPassword: {
         enabled: true
     },
-    // গুগল লগইন কনফিগারেশন
     socialProviders: {
         google: {
             clientId: process.env.GOOGLE_CLIENT_ID || "",
