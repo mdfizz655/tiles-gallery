@@ -7,12 +7,7 @@ export const auth = betterAuth({
     emailAndPassword: {
         enabled: true
     },
-    socialProviders: {
-        google: {
-            clientId: process.env.GOOGLE_CLIENT_ID || "",
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
-        },
-    },
+    // এটি ৪০০ ও ৪০৩ এরর দূর করার জন্য অত্যন্ত জরুরি
     trustedOrigins: [
         "https://tiles-gallery-biia.vercel.app",
         "http://localhost:3000"
