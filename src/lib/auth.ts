@@ -1,4 +1,3 @@
-export const auth = betterAuth({
 import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 import clientPromise from "./db";
@@ -8,9 +7,14 @@ export const auth = betterAuth({
     emailAndPassword: {
         enabled: true
     },
-    // এই অংশটুকু হুবহু যোগ করুন। এটি সব CORS সমস্যা দূর করবে।
+    socialProviders: {
+        google: {
+            clientId: process.env.GOOGLE_CLIENT_ID || "",
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
+        },
+    },
     trustedOrigins: [
-        "https://tiles-gallery-x1cl.vercel.app", // আপনার মেইন লিঙ্ক
+        "https://tiles-gallery-x1cl.vercel.app",
         "http://localhost:3000"
     ],
     secret: process.env.BETTER_AUTH_SECRET,
