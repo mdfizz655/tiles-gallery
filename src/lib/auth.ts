@@ -14,7 +14,7 @@ export const auth = betterAuth({
         },
     },
     trustedOrigins: [
-        "https://tiles-gallery-x1cl.vercel.app",
+        "https://tiles-gallery-biia.vercel.app",
         "http://localhost:3000"
     ],
     secret: process.env.BETTER_AUTH_SECRET,
