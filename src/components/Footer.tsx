@@ -116,7 +116,7 @@ const Footer = () => {
                            
                            
                            
-                            <span>info@tilegallery.com</span>
+                            <span>info@mustafiz.com</span>
                      
                      
                      
@@ -131,7 +131,7 @@ const Footer = () => {
                            
                            
                            
-                            <span>+880 1234 567 890</span>
+                            <span>+8801754112435</span>
                      
                      
                      
@@ -144,7 +144,7 @@ const Footer = () => {
                            
                            
                             <MapPin size={18} className="text-blue-400" />
-                            <span>Banani, Dhaka, Bangladesh</span>
+                            <span>Rajshahi, Bangladesh</span>
                        
                        
                         </li>
