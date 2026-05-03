@@ -1,6 +1,6 @@
 import { createAuthClient } from "better-auth/react";
 
 export const authClient = createAuthClient({
-    // এখানে কোনো স্লাশ ছাড়া সরাসরি ডোমেইন লিঙ্ক অথবা শুধু '/' দিন
-    baseURL: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"
+    // এটি ব্রাউজারের বর্তমান ইউআরএল থেকেই বেস ইউআরএল নিয়ে নিবে, ফলে আর CORS সমস্যা হবে না
+    baseURL: typeof window !== 'undefined' ? window.location.origin : "http://localhost:3000"
 });
