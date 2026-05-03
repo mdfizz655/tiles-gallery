@@ -3,16 +3,16 @@ import tilesData from "../tiles.json";
 import Link from "next/link";
 
 export default function Home() {
-  const featuredTiles = tilesData.slice(0, 4); // Prothom 4-ti tiles featured hisebe thakbe
+  const featuredTiles = tilesData.slice(0, 4); 
 
   return (
     <div className="pb-20">
       
-      {/* 1. Banner Section (Hero with Image Tag) */}
+      
       <section className="hero min-h-[80vh] bg-base-100 px-4 lg:px-12">
         <div className="hero-content flex-col lg:flex-row-reverse gap-10">
           
-          {/* Banner Image */}
+          
           <div className="lg:w-1/2">
             <img 
               src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000" 
